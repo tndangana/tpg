@@ -1,4 +1,4 @@
-package zw.co.hitrac.support;
+package zw.co.hitrac.tpg;
 
 import java.io.Serializable;
 import java.util.List;
