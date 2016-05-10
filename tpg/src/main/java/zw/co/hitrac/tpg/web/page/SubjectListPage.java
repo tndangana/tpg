@@ -11,7 +11,7 @@ import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PropertyListView;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-import zw.co.hitrac.support.TpgPageParametersUtil;
+import zw.co.hitrac.tpg.TpgPageParametersUtil;
 import zw.co.hitrac.tpg.business.domain.Subject;
 import zw.co.hitrac.tpg.web.model.SubjectListModel;
 

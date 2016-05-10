@@ -13,7 +13,7 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import zw.co.hitrac.support.TpgPageParametersUtil;
+import zw.co.hitrac.tpg.TpgPageParametersUtil;
 import zw.co.hitrac.tpg.business.domain.Subject;
 import zw.co.hitrac.tpg.business.service.SubjectService;
 import zw.co.hitrac.tpg.web.model.SubjectModel;
