@@ -14,34 +14,35 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import zw.co.hitrac.tpg.TpgPageParametersUtil;
-import zw.co.hitrac.tpg.business.domain.Level;
-import zw.co.hitrac.tpg.business.service.LevelService;
-import zw.co.hitrac.tpg.web.model.LevelModel;
+import zw.co.hitrac.tpg.business.domain.Period;
+import zw.co.hitrac.tpg.business.service.PeriodService;
+import zw.co.hitrac.tpg.web.model.PeriodModel;
 
 /**
  *
- * @author hitrac
+ * @author g-birds
  */
-public class LevelEditPage extends WebPage {
+public class PeriodEditPage extends WebPage{
     
-    private LevelModel levelmodel;
+    
+    private PeriodModel periodmodel;
     @SpringBean
-    private LevelService levelservice;
+    private PeriodService periodservice;
 
-    public LevelEditPage(PageParameters parameters) {
+    public PeriodEditPage(PageParameters parameters) {
         super(parameters);
          createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
-          Form<Level> form = new Form<Level>("form", new CompoundPropertyModel<Level>(levelmodel));
+          Form<Period> form = new Form<Period>("form", new CompoundPropertyModel<Period>(periodmodel));
           
-          form.add(new RequiredTextField("leveltype"));
+          form.add(new RequiredTextField("term"));
           
-          form.add(new Button("submitt"){
+          form.add(new Button("submit"){
                @Override
             public void onSubmit() {
-                Level level = levelmodel.getObject();
-                 levelservice.save(level);
-                setResponsePage(LevelListPage.class);
+                Period period = periodmodel.getObject();
+                 periodservice.save(period);
+                setResponsePage(PeriodListPage.class);
             }
         });
           add(form);
@@ -51,7 +52,7 @@ public class LevelEditPage extends WebPage {
     private void createProgramModel(PageParameters parameters) {
         
          Long id = TpgPageParametersUtil.extractId(parameters);
-        levelmodel = new LevelModel(id);
+        periodmodel = new PeriodModel(id);
         
         
         
@@ -61,9 +62,4 @@ public class LevelEditPage extends WebPage {
         
     }
 
-
-    
-    
-    
-    
 

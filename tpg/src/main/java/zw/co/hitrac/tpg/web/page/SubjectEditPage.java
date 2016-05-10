@@ -14,34 +14,35 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import zw.co.hitrac.tpg.TpgPageParametersUtil;
-import zw.co.hitrac.tpg.business.domain.Level;
-import zw.co.hitrac.tpg.business.service.LevelService;
-import zw.co.hitrac.tpg.web.model.LevelModel;
+import zw.co.hitrac.tpg.business.domain.Subject;
+import zw.co.hitrac.tpg.business.service.SubjectService;
+import zw.co.hitrac.tpg.web.model.SubjectModel;
 
 /**
  *
- * @author hitrac
+ * @author g-birds
  */
-public class LevelEditPage extends WebPage {
+public class SubjectEditPage extends WebPage{
     
-    private LevelModel levelmodel;
+    
+    private SubjectModel subjectmodel;
     @SpringBean
-    private LevelService levelservice;
+    private SubjectService subjectservice;
 
-    public LevelEditPage(PageParameters parameters) {
+    public SubjectEditPage(PageParameters parameters) {
         super(parameters);
          createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
-          Form<Level> form = new Form<Level>("form", new CompoundPropertyModel<Level>(levelmodel));
+          Form<Subject> form = new Form<Subject>("form", new CompoundPropertyModel<Subject>(subjectmodel));
           
           form.add(new RequiredTextField("leveltype"));
           
-          form.add(new Button("submitt"){
+          form.add(new Button("subjectname"){
                @Override
             public void onSubmit() {
-                Level level = levelmodel.getObject();
-                 levelservice.save(level);
-                setResponsePage(LevelListPage.class);
+                Subject subject = subjectmodel.getObject();
+                 subjectservice.save(subject);
+                setResponsePage(SubjectListPage.class);
             }
         });
           add(form);
@@ -51,7 +52,7 @@ public class LevelEditPage extends WebPage {
     private void createProgramModel(PageParameters parameters) {
         
          Long id = TpgPageParametersUtil.extractId(parameters);
-        levelmodel = new LevelModel(id);
+        subjectmodel = new SubjectModel(id);
         
         
         
@@ -61,9 +62,5 @@ public class LevelEditPage extends WebPage {
         
     }
 
-
-    
-    
-    
     
 

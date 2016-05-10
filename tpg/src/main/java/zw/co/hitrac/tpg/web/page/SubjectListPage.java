@@ -12,41 +12,35 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PropertyListView;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import zw.co.hitrac.tpg.TpgPageParametersUtil;
-import zw.co.hitrac.tpg.business.domain.Gender;
-import zw.co.hitrac.tpg.web.model.GenderListModel;
+import zw.co.hitrac.tpg.business.domain.Subject;
+import zw.co.hitrac.tpg.web.model.SubjectListModel;
 
 /**
  *
- * @author pchikumba
+ * @author g-birds
  */
-public class GenderListPage extends WebPage{
-    public GenderListPage(PageParameters parameters){
+public class SubjectListPage extends WebPage{
+    
+          public SubjectListPage(PageParameters parameters) {
         super(parameters);
-        
         add(new BookmarkablePageLink("back", HomePage.class));
-        add(new BookmarkablePageLink("new", GenderEditPage.class));
-        add(new PropertyListView<Gender>("gender", new GenderListModel()) {
+        add(new BookmarkablePageLink("new", SubjectEditPage.class));
+        add(new PropertyListView<Subject>("subject", new SubjectListModel()) {
 
             @Override
-            protected void populateItem(ListItem<Gender> item) {
-                item.add(new Label("gendertype"));
+            protected void populateItem(ListItem<Subject> item) {
+                item.add(new Label("subjectname"));
 
                 PageParameters pageParameters = new PageParameters();
                 pageParameters.add(TpgPageParametersUtil.ID, item.getModelObject().getId());
-                item.add(new BookmarkablePageLink("edit", GenderEditPage.class, pageParameters));
+                item.add(new BookmarkablePageLink("edit", SubjectEditPage.class, pageParameters));
 
             }
 
         });
 
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
+
 }
+    
+

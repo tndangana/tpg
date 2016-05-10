@@ -5,13 +5,17 @@
  */
 package zw.co.hitrac.tpg.business.service;
 
+import zw.co.hitrac.tpg.business.domain.Religion;
 import zw.co.hitrac.tpg.BusinessComponent;
-import zw.co.hitrac.tpg.business.domain.ResultSheet;
+
+
+
+
 
 /**
  *
- * @author hitrac
+ * @author pchikumba
  */
-public interface ResultSheetService  extends BusinessComponent<ResultSheet>{
+public interface ReligionService extends BusinessComponent<Religion>{
     
 }

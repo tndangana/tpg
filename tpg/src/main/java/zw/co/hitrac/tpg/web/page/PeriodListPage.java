@@ -13,31 +13,32 @@ import org.apache.wicket.markup.html.list.PropertyListView;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import zw.co.hitrac.tpg.TpgPageParametersUtil;
-import zw.co.hitrac.tpg.business.domain.Level;
-import zw.co.hitrac.tpg.business.service.LevelService;
-import zw.co.hitrac.tpg.web.model.LevelListModel;
+import zw.co.hitrac.tpg.business.domain.Period;
+import zw.co.hitrac.tpg.business.service.PeriodService;
+import zw.co.hitrac.tpg.web.model.PeriodListModel;
 
 /**
  *
- * @author hitrac
+ * @author g-birds
  */
-public class LevelListPage extends WebPage{
+public class PeriodListPage extends WebPage{
     
+       
     @SpringBean
-    private LevelService levelservice;
+    private PeriodService periodservice;
 
-    public LevelListPage(PageParameters parameters) {
+    public PeriodListPage(PageParameters parameters) {
         super(parameters);
-        add(new BookmarkablePageLink("new", LevelEditPage.class));
-         add(new PropertyListView<Level>("level", new LevelListModel()){
+        add(new BookmarkablePageLink("new", PeriodEditPage.class));
+         add(new PropertyListView<Period>("period", new PeriodListModel()){
 
             @Override
-            protected void populateItem(ListItem<Level> li) {
+            protected void populateItem(ListItem<Period> item) {
                 
-                 li.add(new Label("leveltype"));
+                 item.add(new Label("term"));
                  PageParameters pageParameters = new PageParameters();
-                 pageParameters.add(TpgPageParametersUtil.ID, li.getModelObject().getId());
-                  li.add(new BookmarkablePageLink("edit", LevelEditPage.class, pageParameters));
+                 pageParameters.add(TpgPageParametersUtil.ID, item.getModelObject().getId());
+                  item.add(new BookmarkablePageLink("edit", PeriodEditPage.class, pageParameters));
                   
             }
          
@@ -46,6 +47,7 @@ public class LevelListPage extends WebPage{
          });
         
     }
+    
     
     
     

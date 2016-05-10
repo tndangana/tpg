@@ -5,7 +5,7 @@
  */
 package zw.co.hitrac.tpg.business.service;
 
-import zw.co.hitrac.support.BusinessComponent;
+import zw.co.hitrac.tpg.BusinessComponent;
 import zw.co.hitrac.tpg.business.domain.Gender;
 
 /**
