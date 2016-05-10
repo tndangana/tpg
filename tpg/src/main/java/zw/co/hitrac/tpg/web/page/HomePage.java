@@ -18,6 +18,8 @@ public class HomePage extends WebPage {
       public HomePage(PageParameters parameters) {
         super(parameters);
         add(new BookmarkablePageLink("level", LevelListPage.class));
+         add(new BookmarkablePageLink("period", PeriodListPage.class));
+          add(new BookmarkablePageLink("subject", SubjectListPage.class));
         
         
        
