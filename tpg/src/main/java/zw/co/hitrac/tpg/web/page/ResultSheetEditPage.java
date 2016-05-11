@@ -9,6 +9,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.RequiredTextField;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -35,10 +36,11 @@ public class ResultSheetEditPage extends WebPage {
         super(parameters);
            createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
+        add(new BookmarkablePageLink("back", HomePage.class));
         
         
         
-         Form<ResultSheet> form = new Form<ResultSheet>("form", new CompoundPropertyModel<ResultSheet>(resultmodel));
+   Form<ResultSheet> form = new Form<ResultSheet>("form", new CompoundPropertyModel<ResultSheet>(resultmodel));
           
        
 form.add(new RequiredTextField("level"));
@@ -48,7 +50,7 @@ form.add(new RequiredTextField("Subject"));
 form.add(new RequiredTextField("Actualmark"));
 form.add(new RequiredTextField("PossibleMark"));
           
-          form.add(new Button("submitt"){
+          form.add(new Button("submit"){
                @Override
             public void onSubmit() {
                 ResultSheet resultsheet = resultmodel.getObject();
