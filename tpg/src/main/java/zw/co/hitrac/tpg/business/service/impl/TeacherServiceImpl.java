@@ -6,8 +6,10 @@
 package zw.co.hitrac.tpg.business.service.impl;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zw.co.hitrac.tpg.business.domain.Teacher;
+import zw.co.hitrac.tpg.business.repository.TeacherRepo;
 import zw.co.hitrac.tpg.business.service.TeacherService;
 
 /**
@@ -16,21 +18,25 @@ import zw.co.hitrac.tpg.business.service.TeacherService;
  */
 @Service
 public class TeacherServiceImpl implements TeacherService {
+    
+    @Autowired
+    private TeacherRepo teacherrepo;
 
-    public Teacher save(Teacher t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Teacher save(Teacher teacher) {
+       return teacherrepo.save(teacher);
     }
 
     public List<Teacher> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return teacherrepo.findAll();
     }
 
     public Teacher find(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return teacherrepo.findOne(id);
     }
 
-    public void delete(Teacher t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void delete(Teacher teacher) {
+        teacherrepo.delete(teacher);
+        
     }
     
 }
