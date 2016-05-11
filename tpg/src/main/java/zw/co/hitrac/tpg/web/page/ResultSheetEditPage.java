@@ -45,7 +45,7 @@ public class ResultSheetEditPage extends WebPage {
         super(parameters);
            createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
-//        add(new BookmarkablePageLink("back", HomePage.class));
+        add(new BookmarkablePageLink("back", HomePage.class));
         
         
         

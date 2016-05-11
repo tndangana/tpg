@@ -29,6 +29,7 @@ public class TeacherListPage extends WebPage{
 
     public TeacherListPage(PageParameters parameters) {
         super(parameters);
+           add(new BookmarkablePageLink("back", HomePage.class));
         add(new BookmarkablePageLink("new", TeacherEditPage.class));
         add(new BookmarkablePageLink("back", HomePage.class));
         
