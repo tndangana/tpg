@@ -22,6 +22,7 @@ public class HomePage extends WebPage {
           add(new BookmarkablePageLink("subject", SubjectListPage.class));
            add(new BookmarkablePageLink("resultsheet", ResultSheetListPage.class));
             add(new BookmarkablePageLink("teacher", TeacherListPage.class));
+            add(new BookmarkablePageLink("user", UserListPage.class));
         
         
        
