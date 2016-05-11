@@ -9,6 +9,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.RequiredTextField;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -31,7 +32,8 @@ public class LevelEditPage extends WebPage {
     public LevelEditPage(PageParameters parameters) {
         super(parameters);
          createProgramModel(parameters);
-        add(new FeedbackPanel("feedback"));
+        //add(new FeedbackPanel("feedback"));
+        add(new BookmarkablePageLink("back", LevelListPage.class));
           Form<Level> form = new Form<Level>("form", new CompoundPropertyModel<Level>(levelmodel));
           
           form.add(new RequiredTextField("leveltype"));
