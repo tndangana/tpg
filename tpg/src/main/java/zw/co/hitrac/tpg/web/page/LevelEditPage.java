@@ -36,7 +36,7 @@ public class LevelEditPage extends WebPage {
           
           form.add(new RequiredTextField("leveltype"));
           
-          form.add(new Button("submitt"){
+          form.add(new Button("submit"){
                @Override
             public void onSubmit() {
                 Level level = levelmodel.getObject();
