@@ -9,6 +9,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.RequiredTextField;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -34,6 +35,7 @@ public class TeacherEditPage extends WebPage {
         super(parameters);
         createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
+        add(new BookmarkablePageLink("back", HomePage.class));
         
         Form<Teacher> form = new Form<Teacher>("form", new CompoundPropertyModel<Teacher>(teachermodel));
         

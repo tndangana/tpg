@@ -27,6 +27,7 @@ public class ResultSheetListPage extends WebPage {
 
     public ResultSheetListPage(PageParameters parameters) {
         super(parameters);
+           add(new BookmarkablePageLink("back", HomePage.class));
         add(new BookmarkablePageLink("new", ResultSheetEditPage.class));
          add(new PropertyListView<ResultSheet>("resultsheet", new ResultSheetListModel()){
 
