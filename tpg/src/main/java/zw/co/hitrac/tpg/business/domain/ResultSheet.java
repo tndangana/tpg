@@ -30,7 +30,8 @@ public class ResultSheet implements Serializable {
    
     @ManyToOne
     private Period period;
-    private String studentname;
+    @OneToOne
+    private Student student;
     @ManyToOne
     private Subject Subject;
     private int Actualmark;
@@ -63,16 +64,18 @@ public class ResultSheet implements Serializable {
     public void setLevel(Level level) {
         this.level = level;
     }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
    
 
-    public String getStudentname() {
-        return studentname;
-    }
-
-    public void setStudentname(String studentname) {
-        this.studentname = studentname;
-    }
-
+  
    
 
  

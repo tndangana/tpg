@@ -20,14 +20,18 @@ import zw.co.hitrac.tpg.TpgPageParametersUtil;
 import zw.co.hitrac.tpg.business.domain.Level;
 import zw.co.hitrac.tpg.business.domain.Period;
 import zw.co.hitrac.tpg.business.domain.ResultSheet;
+import zw.co.hitrac.tpg.business.domain.Student;
 import zw.co.hitrac.tpg.business.domain.Subject;
+import zw.co.hitrac.tpg.business.domain.Teacher;
 import zw.co.hitrac.tpg.business.service.ResultSheetService;
 import zw.co.hitrac.tpg.web.model.LevelListModel;
 import zw.co.hitrac.tpg.web.model.LevelModel;
 import zw.co.hitrac.tpg.web.model.PeriodListModel;
 import zw.co.hitrac.tpg.web.model.ResultSheetListModel;
 import zw.co.hitrac.tpg.web.model.ResultSheetModel;
+import zw.co.hitrac.tpg.web.model.StudentListModel;
 import zw.co.hitrac.tpg.web.model.SubjectListModel;
+import zw.co.hitrac.tpg.web.model.TeacherListModel;
 
 
 
@@ -53,6 +57,15 @@ public class ResultSheetEditPage extends WebPage {
    
     SubjectListModel subjectlistmodel = new SubjectListModel();
    ChoiceRenderer<Subject> subjectChoice = new ChoiceRenderer<Subject> ("subjectname","id");
+   
+    TeacherListModel teacherlistmodel = new TeacherListModel();
+   ChoiceRenderer<Teacher> teacherChoice = new ChoiceRenderer<Teacher> ("lname","id");
+   
+   
+   
+    StudentListModel studentlistmodel = new  StudentListModel();
+   ChoiceRenderer<Student> studentChoice = new  ChoiceRenderer<Student> ("studentname","id");
+   
     
    PeriodListModel periodlistmodel = new PeriodListModel();
    ChoiceRenderer<Period> periodChoice = new ChoiceRenderer<Period> ("term","id");
@@ -66,12 +79,15 @@ public class ResultSheetEditPage extends WebPage {
       form.add(new DropDownChoice<Level>("level", levellistmodel,  levelChoice)) ;
 //form.add(new RequiredTextField("level"));
 //form.add(new RequiredTextField("period"));
-form.add(new RequiredTextField("studentname"));
+//form.add(new RequiredTextField("studentname"));
 //form.add(new RequiredTextField("Subject"));
 form.add(new RequiredTextField("Actualmark"));
 form.add(new RequiredTextField("PossibleMark"));
 form.add(new DropDownChoice<Period>("period", periodlistmodel ,  periodChoice));
  form.add(new DropDownChoice<Subject>("subject", subjectlistmodel ,  subjectChoice )) ;
+ form.add(new DropDownChoice<Teacher>("Teacher", teacherlistmodel ,  teacherChoice )) ;
+ 
+ form.add(new DropDownChoice<Student>("student", studentlistmodel,  studentChoice )) ;
           
           form.add(new Button("submit"){
                @Override

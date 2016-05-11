@@ -24,7 +24,6 @@ public class StudentListPage extends WebPage {
 
     public StudentListPage(PageParameters parameters) {
         super(parameters);
-       
 
         add(new BookmarkablePageLink("back", HomePage.class));
         add(new BookmarkablePageLink("new", StudentEditPage.class));
@@ -34,16 +33,17 @@ public class StudentListPage extends WebPage {
             protected void populateItem(ListItem<Student> item) {
                 item.add(new Label("studentname"));
                 item.add(new Label("surname"));
-                item.add(new Label("dob"));
+//                item.add(new Label("dob"));
                 item.add(new Label("gender.gendertype"));
                 item.add(new Label("relation"));
                 item.add(new Label("residentialaddress"));
                 item.add(new Label("religion.religiontype"));
-               item.add(new Label("nextofkin"));
+                item.add(new Label("nextofkin"));
 
                 PageParameters pageParameters = new PageParameters();
                 pageParameters.add(TpgPageParametersUtil.ID, item.getModelObject().getId());
                 item.add(new BookmarkablePageLink("edit", StudentEditPage.class, pageParameters));
+                item.add(new BookmarkablePageLink("view", StudentViewPage.class, pageParameters));
             }
 
         });

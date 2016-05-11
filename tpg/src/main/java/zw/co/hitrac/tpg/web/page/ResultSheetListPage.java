@@ -35,11 +35,11 @@ public class ResultSheetListPage extends WebPage {
 
             @Override
             protected void populateItem(ListItem<ResultSheet> li) {
-                 li.add(new Label("Teacher"));
-                 li.add(new Label("level"));
-                 li.add(new Label("period"));
-                 li.add(new Label("studentname"));
-                 li.add(new Label("Subject"));
+                 li.add(new Label("Teacher.lname"));
+                 li.add(new Label("level.leveltype"));
+                 li.add(new Label("period.term"));
+                 li.add(new Label("student.studentname"));
+                 li.add(new Label("Subject.subjectname"));
                  li.add(new Label("Actualmark"));
                   li.add(new Label("PossibleMark"));
                  PageParameters pageParameters = new PageParameters();
