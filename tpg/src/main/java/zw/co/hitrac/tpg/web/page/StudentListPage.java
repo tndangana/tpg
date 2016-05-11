@@ -35,10 +35,10 @@ public class StudentListPage extends WebPage {
                 item.add(new Label("studentname"));
                 item.add(new Label("surname"));
                 item.add(new Label("dob"));
-                item.add(new Label("gender"));
+                item.add(new Label("gender.gendertype"));
                 item.add(new Label("relation"));
                 item.add(new Label("residentialaddress"));
-                item.add(new Label("religion"));
+                item.add(new Label("religion.religiontype"));
                item.add(new Label("nextofkin"));
 
                 PageParameters pageParameters = new PageParameters();

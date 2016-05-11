@@ -30,6 +30,7 @@ public class Gender implements Serializable {
     public String getGendertype() {
         return gendertype;
     }
+    
 
     public void setGendertype(String gendertype) {
         this.gendertype = gendertype;
