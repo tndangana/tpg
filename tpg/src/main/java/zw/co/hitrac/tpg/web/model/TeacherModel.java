@@ -22,7 +22,7 @@ public class TeacherModel extends LoadableDetachableModel<Teacher> {
 
     public TeacherModel(Long id) {
         this.id = id;
-        Injector.get().inject(id);
+        Injector.get().inject(this);
     }
     
     

@@ -17,29 +17,32 @@ and open the template in the editor.
         
         <form wicket:id="form">
            
-            <div> <input class="btn btn-danger" wicket:id="back" value="Back"/>
+<!--      <div><a wicket:id="back">Back</a></div>  
 
-</div>
-<!--            <div>
-                <label>Title</label>
+-->
+<!--                <label>Title</label>
                 <input wicket:id="title" type="radio"/>
-            </div>-->
+            </div>-->-->
            <div>
                 <label>Level</label>
-                <input wicket:id="level" type="text"/>
+                <select wicket:id="level" type="text"/>
             </div> 
              <div>
                 <label>period</label>
-                <input wicket:id="period" type="text"/>
+                <select wicket:id="period" type="text"/>
             </div>
             <div>
                 <label>student name</label>
                 <input wicket:id="studentname" type="text"/>
             </div>
-                <div>
+                
+             <div>
                 <label>Subject</label>
-                <input wicket:id="Subject" type="text"/>
+                <select wicket:id="subject" type="text"/>
             </div>
+
+
+
             <div>
                 <label>Actual mark</label>
                 <input wicket:id="Actualmark" type="text"/>
