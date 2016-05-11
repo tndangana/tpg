@@ -3,14 +3,35 @@
 <html lang="en">
 <head>
 <title>Home Page</title>
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
- <style type="text/css">
-  
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Student Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
   </head>
 
 
@@ -20,21 +41,16 @@
 	}
 </style>
  
-   
-  </head>
-
-
-
 
 
 
 <body>
     
-    
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+
         <!-- Collection of nav links, forms, and other content for toggling -->
-     
- 
- <div id="navbarCollapse" class="collapse navbar-collapse">
+        <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 
@@ -88,16 +104,6 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Logout</a></li>
             </ul>
-            
-            
-            
-        </div>
-        <div><img wicket:id="generalChart" /></div>
-        
-        <div>
-            <h1>Student Mark Analyzing System</h1>
-            
-           
         </div>
     
 

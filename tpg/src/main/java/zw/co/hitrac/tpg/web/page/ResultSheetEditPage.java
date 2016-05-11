@@ -25,9 +25,7 @@ import zw.co.hitrac.tpg.business.domain.Subject;
 import zw.co.hitrac.tpg.business.domain.Teacher;
 import zw.co.hitrac.tpg.business.service.ResultSheetService;
 import zw.co.hitrac.tpg.web.model.LevelListModel;
-import zw.co.hitrac.tpg.web.model.LevelModel;
 import zw.co.hitrac.tpg.web.model.PeriodListModel;
-import zw.co.hitrac.tpg.web.model.ResultSheetListModel;
 import zw.co.hitrac.tpg.web.model.ResultSheetModel;
 import zw.co.hitrac.tpg.web.model.StudentListModel;
 import zw.co.hitrac.tpg.web.model.SubjectListModel;
@@ -64,7 +62,7 @@ public class ResultSheetEditPage extends WebPage {
    
    
     StudentListModel studentlistmodel = new  StudentListModel();
-   ChoiceRenderer<Student> studentChoice = new  ChoiceRenderer<Student> ("studentname","id");
+   ChoiceRenderer<Student> studentChoice = new  ChoiceRenderer<Student> ("student","id");
    
     
    PeriodListModel periodlistmodel = new PeriodListModel();
