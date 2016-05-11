@@ -31,6 +31,7 @@ public class TeacherListPage extends WebPage{
         super(parameters);
            add(new BookmarkablePageLink("back", HomePage.class));
         add(new BookmarkablePageLink("new", TeacherEditPage.class));
+        add(new BookmarkablePageLink("back", HomePage.class));
         
          add(new PropertyListView<Teacher>("teacher", new TeacherListModel()){
 

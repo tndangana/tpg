@@ -31,6 +31,7 @@ public class PeriodListPage extends WebPage{
         super(parameters);
            add(new BookmarkablePageLink("back", HomePage.class));
         add(new BookmarkablePageLink("new", PeriodEditPage.class));
+        add(new BookmarkablePageLink("back", HomePage.class));
          add(new PropertyListView<Period>("period", new PeriodListModel()){
 
             @Override

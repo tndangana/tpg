@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -22,12 +23,16 @@ public class ResultSheet implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @OneToOne
     private Teacher Teacher;
     @ManyToOne
     private Level level;
-    private String period;
+   
+    @ManyToOne
+    private Period period;
     private String studentname;
-    private String Subject;
+    @ManyToOne
+    private Subject Subject;
     private int Actualmark;
     private int PossibleMark;
     
@@ -58,14 +63,7 @@ public class ResultSheet implements Serializable {
     public void setLevel(Level level) {
         this.level = level;
     }
-
-    public String getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(String period) {
-        this.period = period;
-    }
+   
 
     public String getStudentname() {
         return studentname;
@@ -75,13 +73,18 @@ public class ResultSheet implements Serializable {
         this.studentname = studentname;
     }
 
-    public String getSubject() {
+   
+
+ 
+    public Subject getSubject() {
         return Subject;
     }
 
-    public void setSubject(String Subject) {
+    public void setSubject(Subject Subject) {
         this.Subject = Subject;
     }
+
+  
 
     public int getActualmark() {
         return Actualmark;
@@ -98,6 +101,15 @@ public class ResultSheet implements Serializable {
     public void setPossibleMark(int PossibleMark) {
         this.PossibleMark = PossibleMark;
     }
+
+    public Period getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(Period period) {
+        this.period = period;
+    }
+    
 
 
   

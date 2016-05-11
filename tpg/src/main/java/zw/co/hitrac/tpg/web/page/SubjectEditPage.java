@@ -37,7 +37,7 @@ public class SubjectEditPage extends WebPage{
         add(new BookmarkablePageLink("back", HomePage.class));
           Form<Subject> form = new Form<Subject>("form", new CompoundPropertyModel<Subject>(subjectmodel));
           
-          form.add(new RequiredTextField("leveltype"));
+          form.add(new RequiredTextField("subjectname"));
           
           form.add(new Button("submit"){
                @Override

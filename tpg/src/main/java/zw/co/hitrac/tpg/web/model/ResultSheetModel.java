@@ -24,7 +24,7 @@ public class ResultSheetModel extends LoadableDetachableModel<ResultSheet> {
 
     public ResultSheetModel(Long id) {
         this.id = id;
-        Injector.get().inject(id);
+        Injector.get().inject(this);
     }
     
     
