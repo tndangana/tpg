@@ -63,7 +63,7 @@ public class StudentEditPage extends WebPage {
         GenderListModel genderListModel = new GenderListModel();
        ChoiceRenderer<Gender> choiceRenderer = new ChoiceRenderer<Gender>("gendertype", "id");
 
-        form.add(new RequiredTextField("name"));
+        form.add(new RequiredTextField("studentname"));
         form.add(new RequiredTextField("surname"));
         form.add(new DateTextField("dob", dobModel, new PatternDateConverter("dd/MM/yy", true)).add(new DatePicker()));
         

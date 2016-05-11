@@ -38,7 +38,7 @@ public class GenderEditPage extends WebPage{
 
         Form<Gender> form = new Form<Gender>("form", new CompoundPropertyModel<Gender>(genderModel));;
         form.add(new RequiredTextField("gendertype"));
-        form.add(new CheckBox("retired"));
+        
         
        
         
