@@ -1,4 +1,4 @@
-package zw.co.hitrac.support;
+package zw.co.hitrac.tpg;
 
 import java.util.Locale;
 import org.hibernate.boot.model.naming.Identifier;
