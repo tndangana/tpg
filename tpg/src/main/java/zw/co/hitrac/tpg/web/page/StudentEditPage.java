@@ -65,7 +65,7 @@ public class StudentEditPage extends WebPage {
 
         form.add(new RequiredTextField("studentname"));
         form.add(new RequiredTextField("surname"));
-        form.add(new DateTextField("dob", dobModel, new PatternDateConverter("dd/MM/yy", true)).add(new DatePicker()));
+     
         
         form.add(new DropDownChoice<Gender>("gender", genderListModel, choiceRenderer));
       

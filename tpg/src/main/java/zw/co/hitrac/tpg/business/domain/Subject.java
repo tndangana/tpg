@@ -23,6 +23,8 @@ public class Subject implements Serializable {
     private Long id;
     private String subjectname;
     
+    private Integer subjectmark=0;
+    
     public Long getId() {
         return id;
     }
@@ -38,6 +40,16 @@ public class Subject implements Serializable {
     public void setSubjectname(String subjectname) {
         this.subjectname = subjectname;
     }
+
+    public Integer getSubjectmark() {
+        return subjectmark;
+    }
+
+    public void setSubjectmark(Integer subjectmark) {
+        this.subjectmark = subjectmark;
+    }
+    
+    
     
     
 

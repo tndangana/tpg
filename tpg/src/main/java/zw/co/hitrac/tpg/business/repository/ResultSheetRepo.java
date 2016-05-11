@@ -6,8 +6,10 @@
 package zw.co.hitrac.tpg.business.repository;
 
 import java.io.Serializable;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import zw.co.hitrac.tpg.business.domain.ResultSheet;
+import zw.co.hitrac.tpg.business.domain.Student;
 
 /**
  *
@@ -15,4 +17,5 @@ import zw.co.hitrac.tpg.business.domain.ResultSheet;
  */
 public interface ResultSheetRepo extends JpaRepository<ResultSheet, Serializable> {
     
+    public List<ResultSheet> findByStudent(Student student);
 }

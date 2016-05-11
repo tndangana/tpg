@@ -8,6 +8,7 @@ package zw.co.hitrac.tpg.web.page;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import zw.co.hitrac.tpg.web.chart.PerformanceChart;
 import zw.co.hitrac.tpg.web.chart.GeneralChart;
 
 /**
@@ -29,6 +30,7 @@ public class HomePage extends WebPage {
         add(new BookmarkablePageLink("gender", GenderListPage.class));
         
         add(new GeneralChart("generalChart", 500, 500));
+       
 
     }
 

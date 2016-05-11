@@ -32,9 +32,9 @@ import zw.co.hitrac.tpg.web.model.TeacherModel;
  * @author hitrac
  */
 public class TeacherEditPage extends WebPage {
-  
+
     private TeacherModel teachermodel;
-    
+
     @SpringBean
     private TeacherService teacherservice;
 
@@ -43,36 +43,31 @@ public class TeacherEditPage extends WebPage {
         createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
         add(new BookmarkablePageLink("back", HomePage.class));
-        
+
         Form<Teacher> form = new Form<Teacher>("form", new CompoundPropertyModel<Teacher>(teachermodel));
-        
+
         SubjectListModel subjectlistmodel = new SubjectListModel();
-   ChoiceRenderer<Subject> subjectChoice = new ChoiceRenderer<Subject> ("subjectname","id");
-        
-         form.add(new DropDownChoice<Subject>("subject", subjectlistmodel,  subjectChoice)) ;
+        ChoiceRenderer<Subject> subjectChoice = new ChoiceRenderer<Subject>("subjectname", "id");
+
+        form.add(new DropDownChoice<Subject>("subject", subjectlistmodel, subjectChoice));
 //         form.add(new RequiredTextField("subject"));
-         form.add(new RequiredTextField("fname"));
-         form.add(new RequiredTextField("lname"));
-         
-         
-          form.add(new Button("submit"){
-               @Override
+        form.add(new RequiredTextField("fname"));
+        form.add(new RequiredTextField("lname"));
+
+        form.add(new Button("submit") {
+            @Override
             public void onSubmit() {
                 Teacher teacher = teachermodel.getObject();
-                 teacherservice.save(teacher);
-                setResponsePage(LevelListPage.class);
+                teacherservice.save(teacher);
+                setResponsePage(TeacherListPage.class);
             }
         });
-          add(form);
+        add(form);
     }
 
     private void createProgramModel(PageParameters parameters) {
-           Long id = TpgPageParametersUtil.extractId(parameters);
+        Long id = TpgPageParametersUtil.extractId(parameters);
         teachermodel = new TeacherModel(id);
     }
-    
-    
-    
-  
-    
+
 }

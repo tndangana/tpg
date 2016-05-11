@@ -22,34 +22,31 @@ import zw.co.hitrac.tpg.web.model.TeacherListModel;
  *
  * @author hitrac
  */
-public class TeacherListPage extends WebPage{
-    
+public class TeacherListPage extends WebPage {
+
     @SpringBean
     private TeacherService teacherservice;
 
     public TeacherListPage(PageParameters parameters) {
         super(parameters);
-           add(new BookmarkablePageLink("back", HomePage.class));
         add(new BookmarkablePageLink("new", TeacherEditPage.class));
         add(new BookmarkablePageLink("back", HomePage.class));
-        
-         add(new PropertyListView<Teacher>("teacher", new TeacherListModel()){
+
+        add(new PropertyListView<Teacher>("teacher", new TeacherListModel()) {
 
             @Override
             protected void populateItem(ListItem<Teacher> li) {
-                
-                 li.add(new Label("subject"));
-                 li.add(new Label("fname"));
-                 li.add(new Label("lname"));
-                  PageParameters pageParameters = new PageParameters();
-                   pageParameters.add(TpgPageParametersUtil.ID, li.getModelObject().getId());
-                  li.add(new BookmarkablePageLink("edit", TeacherEditPage.class, pageParameters));
-                  
+
+                li.add(new Label("subject.subjectname"));
+                li.add(new Label("fname"));
+                li.add(new Label("lname"));
+                PageParameters pageParameters = new PageParameters();
+                pageParameters.add(TpgPageParametersUtil.ID, li.getModelObject().getId());
+                li.add(new BookmarkablePageLink("edit", TeacherEditPage.class, pageParameters));
+
             }
-         
-         
-         
-         });
-        
+
+        });
+
     }
 }
