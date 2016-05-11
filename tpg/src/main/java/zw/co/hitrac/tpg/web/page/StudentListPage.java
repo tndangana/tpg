@@ -32,7 +32,7 @@ public class StudentListPage extends WebPage {
 
             @Override
             protected void populateItem(ListItem<Student> item) {
-                item.add(new Label("name"));
+                item.add(new Label("studentname"));
                 item.add(new Label("surname"));
                 item.add(new Label("dob"));
                 item.add(new Label("gender"));
