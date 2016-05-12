@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableJpaRepositories(basePackages = {"zw.co.hitrac.tpg.business.repository"})
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"zw.co.hitrac.tpg.business.service.impl"})
+@ComponentScan(basePackages = {"zw.co.hitrac.tpg.business.service"})
 @PropertySource("classpath:zw/co/hitrac/tpg/business/config/jdbc.properties")
 public class PersistenceConfig {
 

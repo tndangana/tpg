@@ -1,12 +1,9 @@
 package zw.co.hitrac.tpg.web.page;
 
-import java.util.Date;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-import org.apache.wicket.spring.injection.annot.SpringBean;
 import zw.co.hitrac.tpg.TpgPageParametersUtil;
-import zw.co.hitrac.tpg.business.service.StudentService;
-import zw.co.hitrac.tpg.web.chart.PerformanceChart;
+import zw.co.hitrac.tpg.web.chart.AdvancedPerformanceChart2;
 import zw.co.hitrac.tpg.web.model.StudentModel;
 
 /**
@@ -21,7 +18,7 @@ public class StudentViewPage extends WebPage {
         super(parameters);
         createModel(parameters);
 
-        add(new PerformanceChart("performanceChart", studentModel.getObject().getId(), 500, 500));
+        add(new AdvancedPerformanceChart2("performanceChart", studentModel.getObject().getId(), 1000, 500));
 
     }
 

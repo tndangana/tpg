@@ -62,7 +62,7 @@ public class ResultSheetEditPage extends WebPage {
    
    
     StudentListModel studentlistmodel = new  StudentListModel();
-   ChoiceRenderer<Student> studentChoice = new  ChoiceRenderer<Student> ("student","id");
+   ChoiceRenderer<Student> studentChoice = new  ChoiceRenderer<Student> ("studentname","id");
    
     
    PeriodListModel periodlistmodel = new PeriodListModel();

@@ -29,6 +29,7 @@ public class Student implements Serializable {
     private String residentialaddress;
     private String nextofkin;
     private String relation;
+//    private String student;
     @ManyToOne
     private Religion religion;
     @Temporal(javax.persistence.TemporalType.DATE)
@@ -88,6 +89,8 @@ public class Student implements Serializable {
     public void setReligion(Religion religion) {
         this.religion = religion;
     }
+
+  
 
 
  

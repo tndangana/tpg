@@ -2,6 +2,8 @@
 package zw.co.hitrac.tpg.business.service.impl;
 
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zw.co.hitrac.tpg.business.domain.User;
@@ -19,6 +21,8 @@ public class UserServiceImpl implements UserService{
     
     @Autowired
     private UserRepo userRepo;
+    @PersistenceContext
+    private EntityManager entityManager;
  
 
     public User save(User user) {
@@ -42,7 +46,12 @@ public class UserServiceImpl implements UserService{
     }
 
     public User get(String username, String password) {
-        return userRepo.getOne(this);
+        List<User> users = entityManager.createQuery("SELECT u from User u WHERE u.username=:uname AND u.password=:upass").setParameter("uname", username).setParameter("upass", password).getResultList();
+        if(!users.isEmpty()){
+            return users.get(0);
+        } else {
+            return null;
+        }
     }
     
 }
