@@ -64,12 +64,12 @@ public class ResultSheet implements Serializable {
     public void setLevel(Level level) {
         this.level = level;
     }
-
-    public Student getStudent() {
-        return student;
+//
+   public Student getStudent() {
+       return student;
     }
 
-    public void setStudent(Student student) {
+ public void setStudent(Student student) {
         this.student = student;
     }
 

@@ -32,6 +32,7 @@ public class LevelListPage extends WebPage{
 //           add(new BookmarkablePageLink("back", HomePage.class));
 
         add(new BookmarkablePageLink("new", LevelEditPage.class));
+        add(new BookmarkablePageLink("back", HomePage.class));
          add(new PropertyListView<Level>("level", new LevelListModel()){
 
             @Override

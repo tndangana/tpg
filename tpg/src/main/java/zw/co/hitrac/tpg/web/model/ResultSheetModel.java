@@ -26,6 +26,10 @@ public class ResultSheetModel extends LoadableDetachableModel<ResultSheet> {
         this.id = id;
         Injector.get().inject(this);
     }
+
+    public ResultSheetModel(Long id, Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 

@@ -7,13 +7,16 @@ package zw.co.hitrac.tpg.business.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
-
+//     @OneToMany(mappedBy = "student")
 /**
  *
  * @author pchikumba
@@ -24,6 +27,8 @@ public class Student implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+   @OneToMany(fetch = FetchType.EAGER)
+    private List<ResultSheet> studentresultSheet;
     private String studentname;
     private String surname;
     private String residentialaddress;
@@ -92,6 +97,14 @@ public class Student implements Serializable {
         this.religion = religion;
     }
 
+    public List<ResultSheet> getStudentresultSheet() {
+        return studentresultSheet;
+    }
+
+    public void setStudentresultSheet(List<ResultSheet> studentresultSheet) {
+        this.studentresultSheet = studentresultSheet;
+    }
+
   
 
 
@@ -115,6 +128,8 @@ public class Student implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+
 
     @Override
     public int hashCode() {

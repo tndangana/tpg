@@ -43,7 +43,9 @@ public class StudentListPage extends WebPage {
                 PageParameters pageParameters = new PageParameters();
                 pageParameters.add(TpgPageParametersUtil.ID, item.getModelObject().getId());
                 item.add(new BookmarkablePageLink("edit", StudentEditPage.class, pageParameters));
-                item.add(new BookmarkablePageLink("view", StudentViewPage.class, pageParameters));
+//                item.add(new BookmarkablePageLink("view", StudentViewPage.class, pageParameters));
+                item.add(new BookmarkablePageLink("profileview", StudentProfileViewPage.class, pageParameters));
+                
             }
 
         });

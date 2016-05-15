@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package zw.co.hitrac.tpg.web.page;
 
 import org.apache.wicket.markup.html.WebPage;
@@ -24,9 +20,11 @@ public class HomePage extends WebPage {
         add(new BookmarkablePageLink("teacher", TeacherListPage.class));
         add(new BookmarkablePageLink("student", StudentListPage.class));
         add(new BookmarkablePageLink("religion", ReligionListPage.class));
-        add(new BookmarkablePageLink("user", UserListPage.class));
         add(new BookmarkablePageLink("gender", GenderListPage.class));
+        
+        add(new BookmarkablePageLink("user", UserListPage.class));
         add(new BookmarkablePageLink("logout", LoginPage.class));
+//        add(new BookmarkablePageLink("studentprofile", StudentProfileViewPage.class));
      
     }
 

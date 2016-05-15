@@ -11,7 +11,8 @@ import org.apache.wicket.request.Request;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import zw.co.hitrac.support.business.config.PersistenceConfig;
+import zw.co.hitrac.tpg.business.config.PersistenceConfig;
+
 import zw.co.hitrac.tpg.business.domain.User;
 import zw.co.hitrac.tpg.business.service.UserService;
 

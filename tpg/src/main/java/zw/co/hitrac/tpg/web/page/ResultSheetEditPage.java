@@ -47,7 +47,7 @@ public class ResultSheetEditPage extends WebPage {
         super(parameters);
            createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
-        add(new BookmarkablePageLink("back", HomePage.class));
+        
         
         
         
@@ -86,7 +86,7 @@ form.add(new DropDownChoice<Period>("period", periodlistmodel ,  periodChoice));
  form.add(new DropDownChoice<Teacher>("Teacher", teacherlistmodel ,  teacherChoice )) ;
  
  form.add(new DropDownChoice<Student>("student", studentlistmodel,  studentChoice )) ;
-          
+          form.add(new BookmarkablePageLink("back", HomePage.class));
           form.add(new Button("submit"){
                @Override
             public void onSubmit() {
