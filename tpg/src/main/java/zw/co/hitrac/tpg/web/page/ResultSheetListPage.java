@@ -39,6 +39,7 @@ public class ResultSheetListPage extends WebPage {
                  li.add(new Label("level.leveltype"));
                  li.add(new Label("period.term"));
                  li.add(new Label("student.studentname"));
+                  li.add(new Label("student.surname"));
                  li.add(new Label("Subject.subjectname"));
                  li.add(new Label("Actualmark"));
                   li.add(new Label("PossibleMark"));
