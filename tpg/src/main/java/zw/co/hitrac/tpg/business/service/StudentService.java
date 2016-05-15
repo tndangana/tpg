@@ -13,6 +13,8 @@ import zw.co.hitrac.tpg.business.domain.Student;
  * @author pchikumba
  */
 public interface StudentService extends BusinessComponent<Student>{
+
+   
     
     
 }

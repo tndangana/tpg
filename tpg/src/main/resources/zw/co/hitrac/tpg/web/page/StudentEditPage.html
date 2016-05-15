@@ -1,68 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Student Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
+    <head>
+        <title>Student Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
 
     <body>
-
+        
         <div wicket:id="feedback">here we are !!</div>
-        <div><a wicket:id="back">Back</a></div>
+        <div>
+            <input class="btn btn-danger" wicket:id="back" value="Back"/>
+        </div>
         <form wicket:id="form">
-            <table>
-                <div>
-                    <label>First Name</label>
-                    <input wicket:id="studentname" type="text"/>
-                </div>
-                <div>
-                    <label>Last Name</label>
-                    <input wicket:id="surname" type="text"/>
-                </div>
+            <table class="table table-striped">
 
-                               
-                <div>
-                    <label>Gender</label>
-                    <select wicket:id="gender" type="text"/>
-                </div>
-                
-                
+                <tr>
+                    <td>
+                        <label>First Name</label>
+                    </td>
+                    <td>
+                        <input wicket:id="studentname" type="text"/>
+                    </td>
+                </tr>
+                <tr>
 
-                <div>
-                    <label>religion</label>
-                    <select wicket:id="religion" type="text"/>
-                </div>
-                
-              
+                    <td>
+                        <label>Last Name</label>
+                    </td>
+                    <td>
+                        <input wicket:id="surname" type="text"/>
+                    </td>
+                </tr>
 
 
-                <div>
-                    <label>residential address</label>
-                    <input wicket:id="residentialaddress" type="text"/>
-                </div>
-
-                <div>
-                    <label>next of kin</label>
-                    <input wicket:id="nextofkin" type="text"/>
-                </div>
-
-               
-
-                <div>
-                    <label>relation </label>
-                    <input wicket:id="relation" type="text"/>
-                </div>
+                <tr>
+                    <td>
+                        <label>Gender</label>
+                    </td>
+                    <td>
+                        <select wicket:id="gender" type="text"/>
+                    </td>
+                </tr>
 
 
+                <tr>
+                    <td>
 
-                <div>
-                    <input wicket:id="submit" type="submit"/>
 
-                </div>
+                        <label>religion</label>
+                    </td>
+                    <td>
+                        <select wicket:id="religion" type="text"/>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <label>residential address</label>
+                    </td>
+                    <td>
+                        <input wicket:id="residentialaddress" type="text"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>next of kin</label>
+                    </td>
+                    <td>
+                        <input wicket:id="nextofkin" type="text"/>
+                    </td>
+                </tr>
+
+
+                <tr><td>
+
+                <label>relation </label>
+                    </td>
+                    <td>
+                <input wicket:id="relation" type="text"/>
+                    </td>
+                </tr>
+
+
+                <tr><td>
+                <input class="btn btn-success" wicket:id="submit" type="submit" value="Submit" />
+                    </td></tr>
+
+
+
             </table>
         </form>
 

@@ -29,6 +29,7 @@ public class Student implements Serializable {
     private String residentialaddress;
     private String nextofkin;
     private String relation;
+    
 //    private String student;
     @ManyToOne
     private Religion religion;
@@ -37,6 +38,7 @@ public class Student implements Serializable {
     
     @ManyToOne
     private Gender gender;
+ 
 
     public Long getId() {
         return id;

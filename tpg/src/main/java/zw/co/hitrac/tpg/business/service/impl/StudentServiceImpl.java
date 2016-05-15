@@ -7,6 +7,7 @@ package zw.co.hitrac.tpg.business.service.impl;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import zw.co.hitrac.tpg.business.domain.Student;
 import zw.co.hitrac.tpg.business.repository.StudentRepo;
@@ -42,5 +43,6 @@ public class StudentServiceImpl implements StudentService{
     public void delete(Student student) {
         studentRepo.delete(student);
     }
+
     
 }

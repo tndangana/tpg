@@ -15,6 +15,10 @@ import zw.co.hitrac.tpg.business.service.UserService;
 
 public class TpgSession extends AuthenticatedWebSession {
 
+    public static Object getLoggedResultSheet() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @SpringBean
     private transient UserService userService;
     private User user;
