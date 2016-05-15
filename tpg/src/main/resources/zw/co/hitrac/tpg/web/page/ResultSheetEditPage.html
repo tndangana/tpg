@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ResultSheet Edit Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
 
-    <head>
         <title>Result Sheet Edit Page</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,13 +12,7 @@
     <body>
         <div class="container">
             <div wicket:id="feedback">here we are !!</div>
-            <div>
-
-
-                <!--<a wicket:id="back">Back</a>-->
-                <input class="btn btn-danger" wicket:id="back" value="Back"/>
-
-            </div>
+            
             <form class="form-horizontal" role="form"wicket:id="form">
                 <table class="table table-striped">
                     <tr>
@@ -108,94 +94,16 @@
                             </td>
                     </tr>
 
-                    <tr>
+                    
+
+                            
+                            
+
+
+
+               <tr>
                         <td>
-
-                            <input wicket:id="submit" type="submit"/>
-                            </td>
-                    </tr>
-
-
-
-
-                </table>
-            </form>
-       <div class="container"> 
-        <div wicket:id="feedback">Hie</div>
-        
-         
-             
-         
       
-        
-        <form wicket:id="form">
-            <table class="table table-striped">
-                <tr>
-                    <td>
-                <label>Teacher</label>
-                </td>
-                <td>
-                <select wicket:id="Teacher" type="text"/>
-                </td>
-            </tr>
-           
-
-           <tr>
-                <td>
-                <label>Level</label>
-                </td>
-                <td>
-                <select wicket:id="level" type="text"/>
-           </td>
-            </tr>
-            
-            
-             <tr>
-                <td>
-                <label>period</label>
-                </td>
-                <td>
-                <select wicket:id="period" type="text"/>
-            </td>
-            </tr>
-            <tr>
-                <td>
-                <label>student name</label>
-                </td>
-                <td>
-                
-                <select wicket:id="student" type="text"/>
-            </td>
-            </tr>
-            <tr>
-                <td>
-                
-            
-                <label>Subject</label>
-                </td>
-                <td>
-                <select wicket:id="subject" type="text"/>
-             </td>
-            </tr>
-            <tr>
-                <td>
-                <label>Actual mark</label>
-                </td>
-                <td>
-                <input wicket:id="Actualmark" type="text"/>
-            </td>
-            </tr>
-            <tr>
-                <td>
-                
-                <label>Possible Mark</label>
-                </td>
-                <td>
-                <input wicket:id="PossibleMark" type="text"/>
-             </td>
-            </tr>
-            <tr>
-                <td>
                 <input class="btn btn-success" wicket:id="submit" type="submit" value="Submit" />
                 
                 
@@ -205,5 +113,6 @@
         </table>
         </form>
         </div>
+    
     </body>
 </html>
