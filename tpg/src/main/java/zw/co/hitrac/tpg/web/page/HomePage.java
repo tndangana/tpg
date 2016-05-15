@@ -26,8 +26,9 @@ public class HomePage extends WebPage {
         add(new BookmarkablePageLink("teacher", TeacherListPage.class));
         add(new BookmarkablePageLink("student", StudentListPage.class));
         add(new BookmarkablePageLink("religion", ReligionListPage.class));
-        add(new BookmarkablePageLink("user", UserListPage.class));
         add(new BookmarkablePageLink("gender", GenderListPage.class));
+        
+        add(new BookmarkablePageLink("user", UserListPage.class));
         add(new BookmarkablePageLink("logout", LoginPage.class));
      
     }

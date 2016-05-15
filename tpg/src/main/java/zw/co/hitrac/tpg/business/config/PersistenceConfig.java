@@ -1,4 +1,4 @@
-package zw.co.hitrac.support.business.config;
+package zw.co.hitrac.tpg.business.config;
 
 import java.util.Properties;
 import javax.sql.DataSource;

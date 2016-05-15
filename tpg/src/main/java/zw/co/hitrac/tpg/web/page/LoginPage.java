@@ -8,10 +8,12 @@ package zw.co.hitrac.tpg.web.page;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.PasswordTextField;
+import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.markup.html.form.StatelessForm;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.util.string.Strings;
+import org.springframework.beans.factory.annotation.Required;
 import zw.co.hitrac.tpg.web.config.TpgSession;
 
 /**
@@ -42,7 +44,7 @@ public class LoginPage extends WebPage {
 
       form.setDefaultModel(new CompoundPropertyModel(this));
 
-      form.add(new TextField("username"));
+      form.add(new RequiredTextField("username"));
       form.add(new PasswordTextField("password"));
 
       add(form);

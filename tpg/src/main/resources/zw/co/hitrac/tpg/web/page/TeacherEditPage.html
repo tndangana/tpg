@@ -4,32 +4,52 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     </head>
     <body>
-        <div wicket:id="feedback">here we are !!</div>
-        <div><a wicket:id="back">Back</a></div>
+        <div class="container">
+            <div wicket:id="feedback">here we are !!</div>
 
-        <form wicket:id="form">
-          
-                <div>
-                    <label>Subject</label>
-                    <select wicket:id="subject" type="text"/>
-                </div>
-             <div>
-                    <label>First Name</label>
-                    <input wicket:id="fname" type="text"/>
-                </div>
-             <div>
-                    <label>Last Name</label>
-                    <input wicket:id="lname" type="text"/>
-                </div>
-            
-            <div>
-                    <input wicket:id="submit" type="submit"/>
-                  
-             </div>
-            
-         </form>
- </body>
+
+
+
+            <form wicket:id="form">
+                <table class="table table-striped">
+
+                    <tr>
+                        <td>
+                            <label>Subject</label>
+                        </td>
+                        <td>
+
+                            <select wicket:id="subject" type="text"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>First Name</label>
+                        </td>
+                        <td>
+                            <input wicket:id="fname" type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Last Name</label>
+                        </td>
+                        <td>
+                            <input wicket:id="lname" type="text"/>
+                        </td>
+                    </tr>
+                    <tr><td>
+                            <input class="btn btn-success" wicket:id="submit" type="submit" value="Submit" />
+                            <input class="btn btn-danger" wicket:id="back" value="back"/>  
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+    </body>
 </html>

@@ -42,7 +42,7 @@ public class TeacherEditPage extends WebPage {
         super(parameters);
         createProgramModel(parameters);
         add(new FeedbackPanel("feedback"));
-        add(new BookmarkablePageLink("back", HomePage.class));
+        
 
         Form<Teacher> form = new Form<Teacher>("form", new CompoundPropertyModel<Teacher>(teachermodel));
 
@@ -53,6 +53,7 @@ public class TeacherEditPage extends WebPage {
 //         form.add(new RequiredTextField("subject"));
         form.add(new RequiredTextField("fname"));
         form.add(new RequiredTextField("lname"));
+        form.add(new BookmarkablePageLink("back", TeacherListPage.class));
 
         form.add(new Button("submit") {
             @Override

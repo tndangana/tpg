@@ -16,8 +16,10 @@
             
                <!-- /.row -->
          
-                <a wicket:id="new">Create New</a>
-                <a wicket:id="back">Back</a>
+               <a class="btn btn-success" wicket:id="new"><i class="icon-plus"></i>AddNew</a>
+            <!--<a wicket:id="back">Back</a>-->
+             <input class="btn btn-danger" wicket:id="back" value="Back"/>
+            
               
                     <div class="panel-heading"></div>
                     <!-- /.panel-heading -->
@@ -35,7 +37,9 @@
                                     <tr wicket:id="subject" class="odd gradeX">
                                 <td wicket:id="subjectname"></td>
                                              
-                                  <td><a wicket:id="edit"><i class="fa fa-pencil fa-fw"></i>Edit</a></td>
+                                  <td>
+                                      <a class="btn btn-success" wicket:id="edit"><i class="fa fa-pencil fa-fw"></i>Edit</a>
+                                  </td>
                                     </tr>                                     
                                 </tbody>
                             </table>

@@ -8,7 +8,8 @@ import org.apache.wicket.protocol.http.WicketFilter;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import zw.co.hitrac.support.business.config.PersistenceConfig;
+import zw.co.hitrac.tpg.business.config.PersistenceConfig;
+
 
 
 
