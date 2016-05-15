@@ -10,6 +10,7 @@ import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import zw.co.hitrac.tpg.web.chart.PerformanceChart;
 import zw.co.hitrac.tpg.web.chart.GeneralChart;
+import zw.co.hitrac.tpg.web.config.TpgSession;
 
 /**
  *
@@ -19,6 +20,16 @@ public class HomePage extends WebPage {
 
     public HomePage(PageParameters parameters) {
         super(parameters);
+          add(new BookmarkablePageLink("searchStudent", StudentListPage.class));
+          
+        String resultSheet = "";
+
+        if (TpgSession.getLoggedResultSheet() != null && (TpgSSession.getLoggedResultSheet().getStudent() != null)) {
+            resultSheet = TpgSession.getLoggedResultSheet().getStudent();
+        } else {
+            resultSheet = "----------------Set Student--------------------";
+        } 
+        
         add(new BookmarkablePageLink("level", LevelListPage.class));
         add(new BookmarkablePageLink("period", PeriodListPage.class));
         add(new BookmarkablePageLink("subject", SubjectListPage.class));
