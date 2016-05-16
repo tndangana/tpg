@@ -13,6 +13,7 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import zw.co.hitrac.tpg.business.domain.Role;
 import zw.co.hitrac.tpg.web.page.HomePage;
 import zw.co.hitrac.tpg.web.page.LoginPage;
+import zw.co.hitrac.tpg.web.page.SitePage;
 
 /**
  *
@@ -22,6 +23,7 @@ public class TpgApplication extends AuthenticatedWebApplication {
 
     @Override
     public Class<? extends Page> getHomePage() {
+        
         return HomePage.class;
     }
 
@@ -32,7 +34,9 @@ public class TpgApplication extends AuthenticatedWebApplication {
 
     @Override
     protected Class<? extends WebPage> getSignInPageClass() {
-        return LoginPage.class;
+        return SitePage.class;
+        //return LoginPage.class;
+        
     }
 
     @Override
